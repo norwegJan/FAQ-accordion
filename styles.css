@@ -1,0 +1,161 @@
+:root {
+  /* ===== COLOR TOKENS - PRIMITIVE ===== */
+
+  --purple-950: #301534;
+  --purple-600: #8b6990;
+  --purple-100: #f8eeff;
+
+  --violet-600: #ad28eb;
+}
+
+/* ===== RESET ===== */
+
+html {
+  min-height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100dvh;
+  padding: 2rem 1rem;
+}
+
+body,
+h1,
+h2,
+p,
+label,
+button,
+span {
+  margin-block-end: 0;
+  margin: 0;
+  font-family: "work sans", sans-serif;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  cursor: pointer;
+
+  inline-size: 1px;
+  block-size: 1px;
+  margin: 0;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* ===== BASE / MOBILE STYLES ===== */
+
+body {
+  background-color: var(--purple-100);
+}
+
+main {
+  max-width: 375px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./assets/images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+h1,
+.btn-text {
+  color: var(--purple-950);
+}
+
+p {
+  font-size: 0.875rem;
+  color: var(--purple-600);
+  line-height: 150%;
+}
+
+.accordion-container {
+  max-width: 327px;
+  background-color: white;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1rem;
+  border-radius: 10px;
+}
+
+.accordion-header {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.segments-wrapper,
+.accordion-segment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordion-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn-text {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.btn-icon {
+  flex-shrink: 0;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.hidden {
+  display: none;
+}
