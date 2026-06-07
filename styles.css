@@ -4,8 +4,10 @@
   --purple-950: #301534;
   --purple-600: #8b6990;
   --purple-100: #f8eeff;
-
   --violet-600: #ad28eb;
+
+  --background-image-mobile: url(./assets/images/background-pattern-mobile.svg);
+  --background-image-tablet: url(./assets/images/background-pattern-desktop.svg);
 }
 
 /* ===== RESET ===== */
@@ -51,17 +53,6 @@ button {
   cursor: pointer;
 }
 
-input {
-  appearance: none;
-  -webkit-appearance: none;
-  position: absolute;
-  cursor: pointer;
-
-  inline-size: 1px;
-  block-size: 1px;
-  margin: 0;
-}
-
 .visually-hidden:not(:focus):not(:active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -77,6 +68,9 @@ input {
 
 body {
   background-color: var(--purple-100);
+  background-image: var(--background-image-mobile);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 main {
@@ -86,9 +80,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(./assets/images/background-pattern-mobile.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
 }
 
 h1,
@@ -143,8 +134,22 @@ p {
   text-align: left;
 }
 
+.accordion-btn:hover .btn-text,
+.accordion-btn:focus-visible .btn-text {
+  color: var(--violet-600);
+}
+
+.accordion-btn:focus-visible {
+  outline: 2px solid var(--violet-600);
+  outline-offset: 3px;
+}
+
 .btn-icon {
   flex-shrink: 0;
+}
+
+hr {
+  border: 1px solid var(--purple-100);
 }
 
 .attribution {
