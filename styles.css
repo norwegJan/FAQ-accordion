@@ -7,7 +7,7 @@
   --violet-600: #ad28eb;
 
   --background-image-mobile: url(./assets/images/background-pattern-mobile.svg);
-  --background-image-tablet: url(./assets/images/background-pattern-desktop.svg);
+  --background-image-desktop: url(./assets/images/background-pattern-desktop.svg);
 }
 
 /* ===== RESET ===== */
@@ -53,17 +53,6 @@ button {
   cursor: pointer;
 }
 
-.visually-hidden:not(:focus):not(:active) {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 /* ===== BASE / MOBILE STYLES ===== */
 
 body {
@@ -107,7 +96,10 @@ p {
 .accordion-header {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .segments-wrapper,
@@ -144,6 +136,10 @@ p {
   outline-offset: 3px;
 }
 
+.accordion-btn.active .btn-text {
+  color: var(--violet-600);
+}
+
 .btn-icon {
   flex-shrink: 0;
 }
@@ -160,6 +156,36 @@ hr {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+/* ===== TABLET & DESKTOP ===== */
+
+@media (min-width: 700px) {
+  body {
+    background-image: var(--background-image-desktop);
+  }
+
+  main {
+    max-width: 100vw;
+  }
+
+  .accordion-container {
+    max-width: 600px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .btn-text {
+    font-size: 1.125rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* ===== DYNAMIC ===== */
 
 .hidden {
   display: none;
